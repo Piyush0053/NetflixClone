@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Martel+Sans:wght@600&family=Poppins:wght@300;400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url("assets/images/background.jpg");
+    background-position: center center;
+    background-size: cover;
+    height: 80vh;
+    position: relative;
+}
+
+.main .box {
+    height: 644px;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto;
+    height: 86px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    z-index: 10;
+}
+
+nav img {
+    width: 167px;
+    height: auto;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+}
+
+.hero {
+    font-family: 'Martel Sans', sans-serif;
+    height: calc(100% - 80px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 23px;
+    padding: 0 30px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero> :nth-child(1) {
+    font-family: 'Poppins', sans-serif;
+    font-weight: bolder;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+}
+
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
+}
+
+.btn {
+    padding: 3px 8px;
+    font-weight: 400;
+    color: white;
+    background-color: rgba(248, 243, 243, 0.021);
+    border-radius: 4px;
+    border: 1px solid white;
+    cursor: pointer;
+
+}
+
+.btn-red {
+    background-color: red;
+    color: white;
+    padding: 12px 24px;
+    font-size: 24px;
+    border-radius: 4px;
+    font-weight: 400;
+    height: 56px;
+}
+
+.btn-red-sm {
+    background-color: red;
+    color: white;
+}
+
+.hero-buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+}
+.hero-buttons input {
+    flex: 1;
+    max-width: 500px;
+    padding: 8px;
+    width: 300px;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 4px;
+    background-color: rgba(23, 23, 23, 0.7);
+    color: white;
+}
+
+.first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 30px;
+    min-height: 500px;
+    padding: 70px 30px;
+    gap: 30px;
+}
+
+.first .text {
+    display: flex;
+    flex-direction: column;
+    padding: 34px;
+    flex: 1;
+    color: white;
+    gap: 20px;
+}
+
+.first .text :nth-child(1) {
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.first .text :nth-child(2) {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.first .image {
+    position: relative;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.first .image img {
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+.first video {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 73%;
+    height: auto;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+}
+
+.second {
+    flex-direction: row-reverse;
+}
+
+.faq {
+    background-color: black;
+    color: white;
+    padding: 34px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 70px 30px;
+}
+
+.faq h2 {
+    text-align: center;
+    font-size: 48px;
+    font-weight: bold;
+}
+
+.questions {
+    max-width: 800px;
+    margin: 34px auto;
+}
+
+.question {
+    background-color: #2d2d2d;
+    margin: 8px 0;
+    padding: 24px;
+    cursor: pointer;
+    position: relative;
+    transition: background-color 0.3s ease;
+}
+
+.question:hover {
+    background-color: #414141;
+}
+
+.question::after {
+    content: '+';
+    position: absolute;
+    right: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    transition: transform 0.3s ease;
+}
+
+.question.active::after {
+    transform: translateY(-50%) rotate(45deg);
+}
+
+.question-text {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.answer {
+    font-size: 20px;
+    margin-top: 16px;
+    display: none;
+}
+
+footer {
+    color: rgba(255, 255, 255, 0.7);
+    padding: 48px;
+}
+
+.footer-content {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.links {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.links a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-content button {
+    margin: 16px 0;
+}
+
+.footer-content p {
+    font-size: 14px;
+}
+
+/* Add hover effects to buttons */
+.btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.btn-red:hover {
+    background-color: #e50914;
+}
+
+/* Add hover effects to links */
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Style the input field focus state */
+.hero-buttons input:focus {
+    outline: none;
+    border-color: white;
+}
+
+/* Added media queries for better responsiveness */
+@media (max-width: 768px) {
+    .first {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .first.second {
+        flex-direction: column;
+    }
+
+    .first .text :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .first .text :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .hero-buttons input {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .btn-red {
+        width: 100%;
+        margin-top: 8px;
+    }
+}
+
+.language-picker {
+    position: relative;
+    display: inline-block;
+}
+
+.language-select {
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    padding-right: 1rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.language-select option {
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 0.5rem;
+}
+
+.language-select:focus {
+    outline: none;
+}
