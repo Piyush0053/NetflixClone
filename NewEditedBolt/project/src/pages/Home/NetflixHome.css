@@ -1,0 +1,145 @@
+/* Main Layout Styles */
+.main {
+  font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #000;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.dark-theme {
+  --text-primary: #ffffff;
+  --text-secondary: #e5e5e5;
+  --bg-primary: #141414;
+  --bg-secondary: #000000;
+  --card-bg: rgba(20, 20, 20, 0.7);
+  --hover-color: #e50914;
+}
+
+.light-theme {
+  --text-primary: #333333;
+  --text-secondary: #555555;
+  --bg-primary: #f5f5f5;
+  --bg-secondary: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --hover-color: #e50914;
+}
+
+.homepage-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.homepage-background.loaded {
+  opacity: 1;
+}
+
+.background-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7));
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  z-index: -1;
+}
+
+.separation {
+  height: 8px;
+  width: 100%;
+  background-color: #222;
+  margin: 0;
+}
+
+/* Glass effect for components */
+.glass-effect {
+  background: rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+
+.glass-card {
+  background: rgba(20, 20, 20, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-card:hover {
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.2);
+}
+
+/* Button styles */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: background-color 0.2s, transform 0.1s;
+}
+
+.btn-red {
+  background-color: #e50914;
+  color: white;
+}
+
+.btn-red:hover {
+  background-color: #f40612;
+}
+
+.btn-xl {
+  padding: 12px 24px;
+  font-size: 1.5rem;
+  border-radius: 4px;
+}
+
+/* Form styles */
+input {
+  border: 1px solid #8c8c8c;
+  border-radius: 4px;
+  margin-right: 8px;
+  padding: 16px;
+  width: 100%;
+  font-size: 1rem;
+}
+
+input:focus {
+  outline: none;
+  border-color: #e50914;
+  box-shadow: 0 0 0 2px rgba(229, 9, 20, 0.3);
+}
+
+@media (max-width: 768px) {
+  .btn-xl {
+    padding: 8px 16px;
+    font-size: 1rem;
+  }
+  
+  input {
+    padding: 12px;
+  }
+}
