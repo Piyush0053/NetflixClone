@@ -10,6 +10,7 @@ import NetflixLoader from '../../components/NetflixLoader/NetflixLoader';
 import { motion } from 'framer-motion';
 import { useNavigate } from '../../hooks/useNavigate';
 
+
 function NetflixHome() {
   const navigate = useNavigate();
   const [isLoading, setIsLoading] = useState(true);
@@ -30,7 +31,7 @@ function NetflixHome() {
   useEffect(() => {
     if (!isLoading) {
       const bgLoader = new Image();
-      bgLoader.src = '/assets/images/background.webp';
+      bgLoader.src = '/src/assets/images/background.jpg';
       bgLoader.onload = () => {
         setBackgroundLoaded(true);
       };
@@ -76,7 +77,7 @@ function NetflixHome() {
             className="background-overlay"
           >
             <img 
-              src="/assets/images/background.webp" 
+              src="/src/assets/images/background.jpg" 
               alt=""
               loading="lazy"
               className="background-image"
